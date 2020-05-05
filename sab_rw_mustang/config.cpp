@@ -8,19 +8,20 @@ class CfgPatches
 		version=1;
 		units[]=
 		{
-			"sab_mustang"
 		};
         weapons[]={};
 		requiredAddons[]=
 		{
-			"sab_mustang"
+			"sab_mustang",
+			"sab_mustang_base"
 		};
     };
 };
 class CfgVehicles {
-    class sab_mustang;
-	class sab_rw_mustang: sab_mustang
+    class sab_mustang_base;
+	class sab_rw_mustang: sab_mustang_base
 	{
+		scope = 1;
         displayName="P-51D-10";
         armor=15;
 
@@ -52,7 +53,7 @@ class CfgVehicles {
 		draconicForceZCoef=1.3;
 		draconicTorqueXCoef=1;
 		draconicTorqueYCoef[]= {
-			6,
+			4,
 			2,
 			0.5,
 			0,
@@ -67,8 +68,8 @@ class CfgVehicles {
 			0
 		};
 		envelope[]={
+			0,
 			0.4,
-			1,
 			2.0,
 			3.5,
 			4.1999998,
@@ -82,7 +83,7 @@ class CfgVehicles {
 			2
 		};
 		thrustCoef[]={
-			0.4,
+			1.0,
 			1.0,
 			1.2,
 			1.6,
@@ -103,12 +104,10 @@ class CfgVehicles {
 		fuelCapacity=681;
 		altFullForce=4572;
 		altNoForce=11247;
-        class Wheels
-		{
-            wheelSteeringSensitivity=0.6;
-		    flapsFrictionCoef=1.8;
-        };
+		flapsFrictionCoef=0.9;
+		wheelSteeringSensitivity=0.75;
+
 
     };
-	 class sab_mustang: sab_rw_mustang{};
+	class sab_mustang : sab_rw_mustang {};
 };

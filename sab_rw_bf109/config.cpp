@@ -8,20 +8,21 @@ class CfgPatches
 		version=1;
 		units[]=
 		{
-			
 		};
         weapons[]={};
 		requiredAddons[]=
-		{
-			"sab_bf109"/*,
+		{	
+			"sab_bf109",
+			"sab_bf109_base",
 			"sab_B_dumbbomb_base",
 			"sab_200Rnd_127x99_mag_Tracers_mag",
 			"sab_200Rnd_200x99_mag_Tracers_mag",
-			"sab_1rnd_50_mag"*/
+			"sab_1rnd_50_mag"
 		};
     };
 };
-/*class cfgAmmo
+
+class cfgAmmo
 {
 	class sab_B_dumbbomb_base;
     class sab_genericbomb_1000_ammo: sab_B_dumbbomb_base
@@ -49,6 +50,7 @@ class CfgPatches
 };
 class cfgMagazines
 {
+	class VehicleMagazine;
     class sab_200Rnd_127x99_mag_Tracers_mag;
     class sab_1800Rnd_127x99_mag_Tracers_mag: sab_200Rnd_127x99_mag_Tracers_mag
 	{
@@ -57,21 +59,17 @@ class cfgMagazines
 		scope=2;
 		count=1800;
 	};
-    class sab_200Rnd_200x99_mag_Tracers_mag
+    class sab_200Rnd_200x99_mag_Tracers_mag : VehicleMagazine
 	{
         class Components {};
 		scope=2;
 		count=200;
-		hit = 480;
-        caliber = 25.0;
+		hit = 520;
+        caliber = 20.0;
 		explosive = 0.4;
-		ammo="sab_B_20mm_ammo";
-		initSpeed=520;
+		initSpeed=800;
 		maxLeadSpeed=200;
 		tracersEvery=1;
-		nameSound="mgun";
-		displayName="20mm ammo";
-		descriptionShort="20mm ammo";
 		muzzleImpulseFactor[]={-0.0049999999,0.1};
         aiAmmoUsageFlags="64 + 128 + 256";
 	};
@@ -89,14 +87,14 @@ class cfgMagazines
 		count=1;
 	};
 };
-*/
+
 class CfgVehicles {
-    class sab_bf109;	
-    class sab_rw_bf109: sab_bf109
+	class sab_bf109_base;
+    class sab_rw_bf109: sab_bf109_base
 	{
-		scope = 2;
+		scope = 1;
 		author="Donov C.";
-		displayName="Bf 109 E-4";
+		displayName="Bf 109 F-4";
 
 		armor = 10;
         elevatorControlsSensitivityCoef=3;
@@ -147,7 +145,7 @@ class CfgVehicles {
 		draconicTorqueXCoef=0.80000001;
 		draconicTorqueYCoef[]={7,6,0.5,0,0,0,0,0,0,0,0,0,0};
 		envelope[]={0.1,0.3,0.80000001,3,4,4.4000001,4.5,4.5,4.4000001,4.0999999,3.5,2.5,2};
-		thrustCoef[]={1.3, 1.2, 1.2,  1.2,  1.0,  1.0, 1.0, 0.9, 0.9, 0.8, 0.8, 0.8, 0.4};
+		thrustCoef[]={1.3, 1.4, 1.4,  1.5,  1.3,  1.1, 1.0, 0.9, 0.9, 0.8, 0.8, 0.8, 0.4};
 		landingAoa="rad 10";
 		stallspeed=89;
 		landingSpeed=105;
@@ -159,5 +157,5 @@ class CfgVehicles {
 		altNoForce=12000;
 		maxSpeed=520; 	
     };
-	class sab_bf109: sab_rw_bf109 {};
+	class sab_bf109 :sab_rw_bf109 {};
 };
