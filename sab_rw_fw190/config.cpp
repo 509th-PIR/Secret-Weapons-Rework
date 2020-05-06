@@ -31,7 +31,7 @@ class CfgVehicles
 		aileronControlsSensitivityCoef=4;
 		rudderControlsSensitivityCoef=2;
 		aileronSensitivity=1.3;
-		elevatorSensitivity=0.4;
+		elevatorSensitivity=0.7;
 		rudderInfluence=0.34999999;
 		elevatorCoef[]=
 		{
@@ -89,17 +89,17 @@ class CfgVehicles
 		draconicForceZCoef=2.5;
 		draconicTorqueXCoef[]=
 		{
-			13.0,    // 0 %
-			11.4,    // 15 %
-			11.2,    // 30 %
-			10.6,    // 45 %
-			9.9,    // 60 %
-			9.6,    // 75 %
-			9.7,    // 90 %
-			9.9,    // 105 %
-			10.3,    // 120 %
-			10.6,    // 135 %
-			10.7     // 150 %
+			9,    // 0 %
+			7.7,    // 15 %
+			6.7,    // 30 %
+			5.7,    // 45 %
+			4.8,    // 60 %
+			4,    // 75 %
+			3.8,    // 90 %
+			3.7,    // 105 %
+			3.67,    // 120 %
+			3.62,    // 135 %
+			3.59     // 150 %
 		};
 		draconicTorqueYCoef[]={
 			7.8,
@@ -119,11 +119,11 @@ class CfgVehicles
 		envelope[]={
 			0,
 			0.15,
-			1.2,
+			.8,
 			2,
-			6,
-			6,
-			6.5,
+			4,
+			5,
+			5.4,
 			6.5,
 			6.4000001,
 			6.0999999,
