@@ -31,23 +31,24 @@ class cfgAmmo
 	{
         hit=8000;
 		indirectHit=3000;
-		indirectHitRange=100;
-		suppressionRadiusHit=200;
+		indirectHitRange=40;
+		suppressionRadiusHit=50;
     };
     class sab_genericbomb_500_ammo: sab_B_dumbbomb_base
 	{
 		hit=3000;
 		indirectHit=1000;
-		indirectHitRange=25;
-		suppressionRadiusHit=50;
+		indirectHitRange=5;
+		explosive = 1;
+		suppressionRadiusHit=10;
     };
     class sab_genericbomb_250_ammo: sab_B_dumbbomb_base 
 	{
         hit=1250;
-		explosive = 0.5;
-		indirectHit=150;
-		indirectHitRange=15;
-		suppressionRadiusHit=20;
+		explosive = 1;
+		indirectHit=425;
+		indirectHitRange=4;
+		suppressionRadiusHit=8;
     };
 };
 class cfgMagazines
@@ -67,6 +68,8 @@ class cfgMagazines
 		explosive = 0.2;
 		scope=2;
 		count=1800;
+		tracersEvery = 1;
+		tracerColorR = [0.1 , 1, 0, 1];
 	};
     class sab_200Rnd_200x99_mag_Tracers_mag : VehicleMagazine
 	{

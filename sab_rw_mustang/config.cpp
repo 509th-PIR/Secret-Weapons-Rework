@@ -28,11 +28,11 @@ class CfgVehicles {
         elevatorControlsSensitivityCoef=4;
 		aileronControlsSensitivityCoef=5;
 		rudderControlsSensitivityCoef=2;
-		aileronSensitivity=1;
-		elevatorSensitivity=0.2;
+		aileronSensitivity=1.2;
+		elevatorSensitivity=0.25;
 		rudderInfluence=0.3;
 		elevatorCoef[]={
-			1.2,
+			1.4,
 			1.2,
 			1.2,
 			1.1,
@@ -83,13 +83,13 @@ class CfgVehicles {
 			2
 		};
 		thrustCoef[]={
-			1.0,
-			1.0,
-			1.2,
+			0.8,
+			0.95,
+			1.1,
+			1.4,
 			1.6,
-			1.8,
-			2,
-			2,
+			1.7,
+			1.7,
 			2,
 			1.8,
 			1.2,
