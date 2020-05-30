@@ -12,6 +12,7 @@ class CfgPatches
         weapons[]={};
 		requiredAddons[]=
 		{
+			"sab_secretweapons",
 			"sab_mustang",
 			"sab_mustang_base"
 		};

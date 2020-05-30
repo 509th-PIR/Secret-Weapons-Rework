@@ -12,7 +12,8 @@ class CfgPatches
         weapons[]={};
 		requiredAddons[]=
 		{	
-			"sab_B_dumbbomb_base"
+			"sab_secretweapons",
+			"sab_B_dumbbomb_base",
 			"sab_200Rnd_127x99_mag_Tracers_mag",
 			"sab_200Rnd_200x99_mag_Tracers_mag",
 			"sab_1rnd_50_mag",
