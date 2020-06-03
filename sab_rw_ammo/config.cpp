@@ -13,7 +13,8 @@ class CfgPatches
 		requiredAddons[]=
 		{	
 			"sab_secretweapons",
-			"sab_B_dumbbomb_base",
+			"Bo_GBU12_LGB",
+			"sab_1600Rnd_762x54_mag_Tracers_mag",
 			"sab_200Rnd_127x99_mag_Tracers_mag",
 			"sab_200Rnd_200x99_mag_Tracers_mag",
 			"sab_1rnd_50_mag",
@@ -25,15 +26,15 @@ class CfgPatches
 
 class cfgAmmo
 {
-	class sab_B_dumbbomb_base;
-    class sab_genericbomb_1000_ammo: sab_B_dumbbomb_base
+	class Bo_GBU12_LGB;
+    class sab_genericbomb_1000_ammo: Bo_GBU12_LGB
 	{
         hit=8000;
 		indirectHit=3000;
 		indirectHitRange=40;
 		suppressionRadiusHit=50;
     };
-    class sab_genericbomb_500_ammo: sab_B_dumbbomb_base
+    class sab_genericbomb_500_ammo: Bo_GBU12_LGB
 	{
 		hit=3000;
 		indirectHit=1000;
@@ -41,7 +42,7 @@ class cfgAmmo
 		explosive = 1;
 		suppressionRadiusHit=10;
     };
-    class sab_genericbomb_250_ammo: sab_B_dumbbomb_base 
+    class sab_genericbomb_250_ammo: Bo_GBU12_LGB 
 	{
         hit=1250;
 		explosive = 1;
@@ -55,11 +56,15 @@ class cfgMagazines
 	class VehicleMagazine;
     class sab_200Rnd_127x99_mag_Tracers_mag;
 	class sab_3600Rnd_792_mag;
+	class sab_1600Rnd_762x54_mag_Tracers_mag : VehicleMagazine {
+		hit = 35;
+	};
 	class sab_1800Rnd_792_mag: sab_3600Rnd_792_mag
 	{
 		scope=2;
 		count=1800;
 		hit=100;
+		tracerColorR = [0.1 , 1, 0, 1];
 	};
     class sab_1800Rnd_127x99_mag_Tracers_mag: sab_200Rnd_127x99_mag_Tracers_mag
 	{
@@ -68,7 +73,7 @@ class cfgMagazines
 		scope=2;
 		count=1800;
 		tracersEvery = 1;
-		tracerColorR = [0.1 , 1, 0, 1];
+		tracerColorR = [1 , 0.1, 0, 1];
 	};
     class sab_200Rnd_200x99_mag_Tracers_mag : VehicleMagazine
 	{
