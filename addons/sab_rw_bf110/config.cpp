@@ -22,6 +22,7 @@ class CfgVehicles
 	class sab_bf110_base;
 	class sab_bf110: sab_bf110_base
 	{
+		displayName = "Bf 110 F-2";
 		gearUpTime = 5.5;
 		gearDownTime = 5;
 		armor = 20;
@@ -126,10 +127,5 @@ class CfgVehicles
 		landingSpeed = 175;
 		wheelSteeringSensitivity = 1.6;
 		insideSoundCoef = 0.35;
-	};
-
-	class sab_bf110: sab_rw_bf110
-	{
-		scope = 2;
 	};
 };

@@ -24,6 +24,7 @@ class CfgVehicles {
     class sab_bf109: sab_bf109_base
 
 	{
+		displayName = "Bf 109 F-4";
 		armor = 10;
         elevatorControlsSensitivityCoef=3;
 		aileronControlsSensitivityCoef=3;
@@ -85,5 +86,4 @@ class CfgVehicles {
 		altNoForce=12000;
 		maxSpeed=520; 	
     };
-	class sab_bf109 :sab_rw_bf109 {};
 };

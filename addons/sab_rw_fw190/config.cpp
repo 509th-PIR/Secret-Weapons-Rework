@@ -153,10 +153,6 @@ class CfgVehicles
 		altFullForce=6300;
 		altNoForce=10350;
 		maxSpeed=652;
-	};
-	class sab_fw190_2: sab_rw_fw190
-	{
-		scope=2;
 		displayName="Fw 190 A-4";
 	};
 };

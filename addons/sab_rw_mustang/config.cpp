@@ -13,14 +13,15 @@ class CfgPatches
 		requiredAddons[]=
 		{
 			"sab_secretweapons",
-			"sab_bf109"
-			
+			"sab_mustang"
+		};
     };
 };
 class CfgVehicles {
     class sab_mustang_base;
 	class sab_mustang: sab_mustang_base
 	{
+		displayName = "P-51D-10";
         armor=15;
         elevatorControlsSensitivityCoef=4;
 		aileronControlsSensitivityCoef=5;
@@ -103,8 +104,5 @@ class CfgVehicles {
 		altNoForce=11247;
 		flapsFrictionCoef=0.9;
 		wheelSteeringSensitivity=0.75;
-
-
     };
-	class sab_mustang : sab_rw_mustang {};
 };
