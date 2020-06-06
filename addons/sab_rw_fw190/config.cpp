@@ -23,6 +23,7 @@ class CfgVehicles
 	class sab_fw190_base;
 	class sab_fw190: sab_fw190_base
 	{
+		displayName="Fw 190 A-4";
 		fuelCapacity=600;
 		armor=17;
 
@@ -153,6 +154,6 @@ class CfgVehicles
 		altFullForce=6300;
 		altNoForce=10350;
 		maxSpeed=652;
-		displayName="Fw 190 A-4";
+
 	};
 };
