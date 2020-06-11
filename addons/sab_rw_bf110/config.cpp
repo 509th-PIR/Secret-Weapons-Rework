@@ -127,5 +127,18 @@ class CfgVehicles
 		landingSpeed = 175;
 		wheelSteeringSensitivity = 1.6;
 		insideSoundCoef = 0.35;
+		class Components
+		{
+			class TransportPylonsComponent
+			{
+				class Pylons
+				{
+					class Pylons5
+					{
+						hardpoints[] = {"SAB_CANNON_37_BF110"};
+					};
+				};
+			};
+		};
 	};
 };

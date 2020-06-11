@@ -114,6 +114,67 @@ class CfgPatches
 class cfgAmmo
 {
 	class sab_B_dumbbomb_base;
+	class ShellCore;
+	class ShellBase: ShellCore
+	{
+		irLock = 1;
+		allowAgainstInfantry = 1;
+		aiAmmoUsageFlags = "128 + 512";
+		explosive = 0;
+		indirectHit = 10;
+		indirectHitRange = 1;
+		dangerRadiusHit = 100;
+		suppressionRadiusHit = 18;
+		cost = 500;
+		sideAirFriction = 1.5;
+		airFriction = -0.00065;
+		deflecting = 15;
+		simulationStep = 0.05;
+		CraterEffects = "ExploAmmoCrater";
+		explosionEffects = "ExploAmmoExplosion";
+		timeToLive = 15;
+		whistleOnFire = 1;
+		whistleDist = 18;
+		tracerScale = 3;
+		tracerStartTime = 0.1;
+		tracerEndTime = 3;
+		warheadName = "AP";
+		class CamShakeExplode
+		{
+			power = 20;
+			duration = 5;
+			frequency = 20;
+			distance = "((80^0.5)*3)";
+		};
+		class CamShakeHit
+		{
+			power = 20;
+			duration = "((round (180^0.25))*0.2 max 0.2)";
+			frequency = 5;
+			distance = 1;
+		};
+		class CamShakeFire
+		{
+			power = "(120^0.25)";
+			duration = "((round (120^0.5))*0.2 max 0.2)";
+			frequency = 20;
+			distance = "((120^0.5)*8)";
+		};
+		class CamShakePlayerFire
+		{
+			power = 1;
+			duration = 1;
+			frequency = 20;
+			distance = 1;
+		};
+	};
+	class LIB_S_37L57_M74: ShellBase
+	{
+		submunitionInitSpeed = 200;
+		submunitionParentSpeedCoef = 0.0;
+		submunitionInitialOffset[] = {0,0,0};
+		triggerOnImpact = 1;
+	};
     class sab_genericbomb_1000_ammo: sab_B_dumbbomb_base
 	{
         hit=8000;
@@ -143,6 +204,36 @@ class cfgMagazines
 	class VehicleMagazine;
     class sab_200Rnd_127x99_mag_Tracers_mag;
 	class sab_3600Rnd_792_mag;
+	//Ju-87 37mm
+	class sab_24rnd_37mm_mag: VehicleMagazine
+	{
+		author="Donov C.";
+		displayName="3.7 cm Flak AP";
+		displayNameShort="3.7cm";
+		ammo="LIB_S_37L57_M74";
+		scope=2;
+		count=18;
+		tracersEvery=1;
+		nameSound="cannon";
+		mass=230;
+	};
+	//Bf 110 37mm
+	class sab_cannon_37_ap_pylonweapon: sab_24rnd_37mm_mag
+	{
+		count = 18;
+		hardpoints[]=
+		{
+			"SAB_CANNON_37"
+		};
+	};
+	class sab_cannon_37_ap_pylonweapon_bf110 : sab_cannon_37_ap_pylonweapon 
+	{
+		count = 40;
+		hardpoints[]=
+		{
+			"SAB_CANNON_37_BF110"
+		};
+	};
 	class sab_1600Rnd_762x54_mag_Tracers_mag : VehicleMagazine {
 		hit = 35;
 	};
