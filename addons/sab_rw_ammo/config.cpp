@@ -14,6 +14,7 @@ class CfgPatches
 		"sab_hmg_cannon_base",
 		"sab_hmg_standard_base",
 		"sab_bomb_bay_weapon",
+		"sab_rw_a26_bay_weapon",
 		"sab_bomb_weapon",
 		"sab_torpedo_weapon",
 		"sab_rocket_weapon",
@@ -292,5 +293,56 @@ class cfgMagazines
 			"SAB_SW_BOMBS_B"
 		};
 		count=1;
+	};
+	class sab_2rnd1000_bomber_mag;
+	class sab_rw_6rnd1000_bomber_mag : sab_2rnd1000_bomber_mag
+	{
+		displayName="BMB 6x1000 lb";
+		displayNameShort="1000";
+		ammo="sab_genericbomb_1000_ammo";
+		count=6;
+		pylonWeapon="sab_rw_a26_bay_weapon";
+		hardpoints[]=
+		{
+			"SAB_SW_BOMBS_B_a26"
+		};
+	};
+	class sab_rw_12rnd500_bomber_mag : sab_rw_6rnd1000_bomber_mag
+	{
+		displayName="BMB 12x500 lb";
+		displayNameShort="500";
+		ammo="sab_genericbomb_500_ammo";
+		count=12;
+		pylonWeapon="sab_rw_a26_bay_weapon";
+		hardpoints[]=
+		{
+			"SAB_SW_BOMBS_B_a26"
+		};
+	};
+	class sab_rw_24rnd250_bomber_mag : sab_rw_6rnd1000_bomber_mag
+	{
+		displayName="BMB 24x250 lb";
+		displayNameShort="250";
+		ammo="sab_genericbomb_250_ammo";
+		count=24;
+		pylonWeapon="sab_rw_a26_bay_weapon";
+		hardpoints[]=
+		{
+			"SAB_SW_BOMBS_B_a26"
+		};
+	};
+};
+class CfgWeapons 
+{
+	class sab_bomb_bay_weapon;
+	class sab_rw_a26_bay_weapon : sab_bomb_bay_weapon
+	{
+		displayname="Bomb Bay";
+		magazines[]=
+		{
+			"sab_rw_6rnd1000_bomber_mag",
+			"sab_rw_12rnd500_bomber_mag",
+			"sab_rw_24rnd250_bomber_mag"
+		};
 	};
 };
