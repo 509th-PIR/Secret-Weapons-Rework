@@ -7,7 +7,7 @@ class CfgPatches
 		author = "Donov C.";
 		authorUrl = "";
 		version = 1;
-		units[] = {"sab_bf110","sab_bf110_2"};
+		units[] = {"sab_bf110"};
 		weapons[] = {};
 		requiredAddons[] = {
 			"sab_secretweapons",
@@ -84,34 +84,32 @@ class CfgVehicles
 			0.3,
 			0.2
 		};
-		draconicForceXCoef = 4.4;
-		draconicForceYCoef = 1;
-		draconicForceZCoef = 3;
+		draconicForceXCoef = 4.5;
+		draconicForceYCoef = 3;
+		draconicForceZCoef = 0.5;
 		draconicTorqueXCoef = 1.5;
 		draconicTorqueYCoef = 2;
 		envelope[] = {
-			0.3,
-			1.5,
-			2,
-			3.5,
-			4,
-			4.5,
-			5,
-			5.2,
-			4.7,
-			4.1,
-			3.5,
+			0.1,
+			0.1,
+			0.9,
+			1.1,
 			2.5,
-			2
+			2.7,
+			3.3,
+			3.4,
+			2.2,
+			2.5,
+			2.0
 		};
 		thrustCoef[] = {
-			1.0,
-			1.0,
+			0.7,
+			0.7,
+			0.8,
+			1.1,
 			1.0,
 			1.0,
 			0.7,
-			0.7,
-			0.5,
 			0.5,
 			0.2,
 			0.1,
@@ -125,7 +123,7 @@ class CfgVehicles
 		maxSpeed = 570;
 		stallSpeed = 145;
 		landingSpeed = 175;
-		wheelSteeringSensitivity = 1.6;
+		wheelSteeringSensitivity = 0.8;
 		insideSoundCoef = 0.35;
 		class Components
 		{
@@ -136,6 +134,10 @@ class CfgVehicles
 					class Pylons5
 					{
 						hardpoints[] = {"SAB_CANNON_37_BF110"};
+						attachment = "";
+						priority = 5;
+						maxweight = 2000;
+						UIposition[] = {0.3,0.3};
 					};
 				};
 			};

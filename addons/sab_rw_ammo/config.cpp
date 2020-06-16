@@ -118,11 +118,13 @@ class cfgAmmo
 	class ShellCore;
 	class ShellBase: ShellCore
 	{
+		simullation = "shotshell";
 		irLock = 1;
-		allowAgainstInfantry = 1;
+		allowAgainstInfantry = 0;
 		aiAmmoUsageFlags = "128 + 512";
 		explosive = 0;
-		indirectHit = 10;
+		hit = 200;
+		indirectHit = 11;
 		indirectHitRange = 1;
 		dangerRadiusHit = 100;
 		suppressionRadiusHit = 18;
@@ -169,8 +171,9 @@ class cfgAmmo
 			distance = 1;
 		};
 	};
-	class LIB_S_37L57_M74: ShellBase
+	class 37mm_AP_AMMO: ShellBase
 	{
+		lightColor[] = {0, 1, 0, 1};
 		submunitionInitSpeed = 200;
 		submunitionParentSpeedCoef = 0.0;
 		submunitionInitialOffset[] = {0,0,0};
@@ -205,28 +208,29 @@ class cfgMagazines
 	class VehicleMagazine;
     class sab_200Rnd_127x99_mag_Tracers_mag;
 	class sab_3600Rnd_792_mag;
-	//Ju-87 37mm
-	class sab_24rnd_37mm_mag: VehicleMagazine
+
+	//This is a terrible way to program the 37mm in.  Considering nobody around me can stop me, I'm doing it anyways
+	//Michael, fight me
+	class sab_24rnd_37mm_mag;
+	//Ju-87 37mm	
+	class sab_cannon_37_ap_pylonweapon: sab_24rnd_37mm_mag
 	{
 		author="Donov C.";
 		displayName="3.7 cm Flak AP";
 		displayNameShort="3.7cm";
-		ammo="LIB_S_37L57_M74";
+		ammo="37mm_AP_AMMO";
 		scope=2;
-		count=18;
 		tracersEvery=1;
 		nameSound="cannon";
 		mass=230;
-	};
-	//Bf 110 37mm
-	class sab_cannon_37_ap_pylonweapon: sab_24rnd_37mm_mag
-	{
+		pylonWeapon = "sab_pylon_37mm_cannon";
 		count = 18;
 		hardpoints[]=
 		{
 			"SAB_CANNON_37"
 		};
 	};
+	//Bf 110 37mm
 	class sab_cannon_37_ap_pylonweapon_bf110 : sab_cannon_37_ap_pylonweapon 
 	{
 		count = 40;
@@ -235,6 +239,8 @@ class cfgMagazines
 			"SAB_CANNON_37_BF110"
 		};
 	};
+	//This concludes the terrible code
+	
 	class sab_1600Rnd_762x54_mag_Tracers_mag : VehicleMagazine {
 		hit = 35;
 	};
@@ -343,6 +349,14 @@ class CfgWeapons
 			"sab_rw_6rnd1000_bomber_mag",
 			"sab_rw_12rnd500_bomber_mag",
 			"sab_rw_24rnd250_bomber_mag"
+		};
+	};
+	class sab_pylon_37mm_cannon;
+	class sab_pylon_37mm_cannon_bf110: sab_pylon_37mm_cannon
+	{
+		magazines[]=
+		{
+			"sab_cannon_37_ap_pylonweapon_bf110"
 		};
 	};
 };

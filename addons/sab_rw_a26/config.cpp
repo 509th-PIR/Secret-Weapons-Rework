@@ -238,13 +238,13 @@ class CfgVehicles {
 				{
 					initAngleX			= 0; minAngleX=0; maxAngleX=0;
 					initAngleY			= 0; minAngleY=0; maxAngleY=0;
-					initFov				= 0.25;
-					minFov				= 0.25;
-					maxFov				= 0.25;
+					initFov				= 0.5;
+					minFov				= 0.10;
+					maxFov				= 0.5;
 					directionStabilized	= 1;
 					visionMode[]		= {"Normal"};
 					thermalMode[]		= {0,1};
-					gunnerOpticsModel	= "";
+					gunnerOpticsModel	= "a3\drones_f\Weapons_F_Gamma\Reticle\UAV_02_Optics_Gunner_F.p3d";
 					opticsPPEffects[]	= {};
 				};
 				showMiniMapInOptics				= true;
@@ -252,12 +252,16 @@ class CfgVehicles {
 				showSlingLoadManagerInOptics	= false;
 			};
 
+			//bombing altitude = 1000m			  /|
+			//bombing airspeed = 300km/h		 / |
+			//angle = ?                         /  |
+
 			minTurn					= -0;
 			maxTurn					= +0;
 			initTurn				= 0;
-			minElev					= -45;
-			maxElev					= 90;
-			initElev				= 50;
+			minElev					= 26;
+			maxElev					= 32;
+			initElev				= 30;
 			maxXRotSpeed			= 0.3;
 			maxYRotSpeed			= 0.3;
 			maxMouseXRotSpeed		= 0.5;

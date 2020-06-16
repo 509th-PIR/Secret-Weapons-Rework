@@ -30,7 +30,7 @@ class CfgVehicles {
 		aileronControlsSensitivityCoef=3;
 		rudderControlsSensitivityCoef=3;
 		aileronSensitivity=0.8;
-		elevatorSensitivity=0.5;
+		elevatorSensitivity=0.4;
 		rudderInfluence=0.34999999;
 		elevatorCoef[]=
         {
@@ -68,13 +68,40 @@ class CfgVehicles {
         wheelSteeringSensitivity=0.75;
 		acceleration=238;
 		angleOfIndicence=0.050000001;
-		draconicForceXCoef=2;
-		draconicForceYCoef=3;
+		draconicForceXCoef=9;
+		draconicForceYCoef=7;
 		draconicForceZCoef=2.0;
 		draconicTorqueXCoef=0.80000001;
-		draconicTorqueYCoef[]={7,6,0.5,0,0,0,0,0,0,0,0,0,0};
-		envelope[]={0.1,0.3,0.80000001,3,4,4.4000001,4.5,4.5,4.4000001,4.0999999,3.5,2.5,2};
-		thrustCoef[]={1.3, 1.4, 1.4,  1.5,  1.3,  1.1, 1.0, 0.9, 0.9, 0.8, 0.8, 0.8, 0.4};
+		draconicTorqueYCoef[]={7,6,5,5,4,4,4,4,3,3,2,2,2};
+		envelope[]={
+			0.1,
+			0.3,
+			0.80000001,
+			3,
+			4,
+			4.4000001,
+			4.5,
+			4.5,
+			4.4000001,
+			4.0999999,
+			3.5,
+			2.5,
+			2
+		};
+		thrustCoef[]={
+			1.3, 
+			1.4, 
+			1.4,  
+			1.2,  
+			1.1,  
+			1.0, 
+			0.8, 
+			0.4, 
+			0.2, 
+			0.1, 
+			0.0, 
+			0.0, 
+			0.0};
 		landingAoa="rad 10";
 		stallspeed=89;
 		landingSpeed=105;
